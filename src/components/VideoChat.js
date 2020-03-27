@@ -28,8 +28,8 @@ const VideoChat = () => {
           room: roomName
         }),
         headers: {
-          "Accept": "application/json",
-          "Content-Type": "application/json"
+          // "Accept": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded"
         }
       }).then(res => res.json());
       setToken(data.token);

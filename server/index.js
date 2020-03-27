@@ -65,7 +65,4 @@ app.post("/voice/token", (req, res) => {
 let port = process.env.PORT;
 app.set("port", port || 8000);
 
-// if (port == null || port == "") {
-//   port = 8000;
-// }
 app.listen(port);

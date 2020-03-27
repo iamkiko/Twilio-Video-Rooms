@@ -19,8 +19,8 @@ const VideoChat = () => {
   //When the user submits the form
   //we want to send the username and room name to the server to exchange for an access token we can use to enter the room
   const handleSubmit = useCallback(
-    async e => {
-      e.preventDefault();
+    async event => {
+      event.preventDefault();
       const data = await fetch("/video/token", {
         method: "POST",
         body: JSON.stringify({

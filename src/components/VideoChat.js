@@ -23,13 +23,13 @@ const VideoChat = () => {
       event.preventDefault();
       const data = await fetch("/video/token", {
         method: "POST",
-        body: JSON.parse({
+        body: JSON.stringify({
           identity: username,
           room: roomName
         }),
         headers: {
-          "Accept": "application/json",
-          "Content-Type": "application/json"
+          "Accept": "application/json; text/html;  charset=UTF-8",
+          "Content-Type": "application/json; text/html; charset=UTF-8"
         }
       }).then(res => res.json());
       setToken(data.token);
